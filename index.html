@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="calci">
+        
+        <div id="scrn">
+           <form><input type="text" id="Display"></form>            
+
+        </div>
+        <div id="buttons">
+            <button id="btn1" onclick="appendToDisplay('7')">7</button>
+            <button id="btn2" onclick="appendToDisplay('8')">8</button>
+            <button id="btn3" onclick="appendToDisplay('9')">9</button>
+            <button id="btn4" onclick="appendToDisplay('/')">/</button>
+            <button id="btn5" onclick="appendToDisplay('4')">4</button>
+            <button id="btn6" onclick="appendToDisplay('5')">5</button>
+            <button id="btn7" onclick="appendToDisplay('6')">6</button>
+            <button id="btn8" onclick="appendToDisplay('*')">*</button>
+            <button id="btn9" onclick="appendToDisplay('1')">1</button>
+            <button id="btn10" onclick="appendToDisplay('2')">2</button>
+            <button id="btn11" onclick="appendToDisplay('3')">3</button>
+            <button id="btn12" onclick="appendToDisplay('-')">-</button>
+            <button id="btn13" onclick="clearDisplay('')">AC</button>
+            <button id="btn14" onclick="appendToDisplay('0')">0</button>
+            <button id="btn15" onclick="calculate('=')">=</button>
+            <button id="btn16" onclick="appendToDisplay('+')">+</button>
+        </div>
+
+    </div>
+
+    <script>
+        let calculator=document.getElementById("calci")
+        calculator.setAttribute("style","border:2px solid black;height:300px;width:200px;border-radius:5%;background-color:grey")
+
+        let ip1=document.getElementById("Display")
+        ip1.setAttribute("style","height:44px;width:182px;border-radius:5px;border:none;text-align:right;font-size:2rem")
+
+        function appendToDisplay(input){
+            ip1.value+=input;
+        }
+        function clearDisplay(){
+            ip1.value=""
+        }
+        function calculate(){
+        
+            ip1.value=eval(ip1.value)
+            
+        }
+    
+
+
+        let screen=document.getElementById("scrn")
+        screen.setAttribute("style","border:2px solid none;height:50px;width:185px;margin-top:10px;margin-left:5px;border-radius:10px;")
+
+
+        let buttons=document.getElementById("buttons")
+        buttons.setAttribute("style","display:grid;grid-template-rows:repeat(4,53px);grid-template-columns:repeat(4,43px);row-gap:5px;column-gap:5px;padding:5px;")
+
+        let btn1=document.getElementById("btn1")
+        btn1.style.borderRadius="10px"
+        btn1.style.border="none"
+        
+
+        let btn2=document.getElementById("btn2")
+        btn2.style.borderRadius="10px"
+        btn2.style.border="none"
+        
+
+        let btn3=document.getElementById("btn3")
+        btn3.style.borderRadius="10px"
+        btn3.style.border="none"
+
+        let btn4=document.getElementById("btn4")
+        btn4.style.borderRadius="10px"
+        btn4.style.backgroundColor="orange"
+        btn4.style.border="none"
+
+        let btn5=document.getElementById("btn5")
+        btn5.style.borderRadius="10px"
+        btn5.style.border="none"
+
+        let btn6=document.getElementById("btn6")
+        btn6.style.borderRadius="10px"
+        btn6.style.border="none"
+
+        let btn7=document.getElementById("btn7")
+        btn7.style.borderRadius="10px"
+        btn7.style.border="none"
+
+        let btn8=document.getElementById("btn8")
+        btn8.style.borderRadius="10px"
+        btn8.style.backgroundColor="orange"
+        btn8.style.border="none"
+
+        let btn9=document.getElementById("btn9")
+        btn9.style.borderRadius="10px"
+        btn9.style.border="none"
+
+        let btn10=document.getElementById("btn10")
+        btn10.style.borderRadius="10px"
+        btn10.style.border="none"
+    
+
+        let btn11=document.getElementById("btn11")
+        btn11.style.borderRadius="10px"
+        btn11.style.border="none"
+        
+
+        let btn12=document.getElementById("btn12")
+        btn12.style.borderRadius="10px"
+        btn12.style.backgroundColor="orange"
+        btn12.style.border="none"
+
+        let btn13=document.getElementById("btn13")
+        btn13.style.borderRadius="10px"
+        btn13.style.backgroundColor="aqua"
+        btn13.style.border="none"
+
+        let btn14=document.getElementById("btn14")
+        btn14.style.borderRadius="10px"
+        btn14.style.border="none"
+
+        let btn15=document.getElementById("btn15")
+        btn15.style.borderRadius="10px"
+        btn15.style.backgroundColor="green"
+        btn15.style.border="none"
+
+        let btn16=document.getElementById("btn16")
+        btn16.style.borderRadius="10px"
+        btn16.style.backgroundColor="orange"
+        btn16.style.border="none"
+
+
+
+
+    </script>
+    
+</body>
+</html>
